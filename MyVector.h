@@ -6,7 +6,7 @@ using namespace std;
 template<class T>
 class Vector {
 public:
-	typedef T* Iterator;//µü´úÆ÷
+	typedef T* Iterator;//è¿­ä»£å™¨
 	Vector()
 		:_start(0)
 		, _finish(0)
@@ -55,7 +55,7 @@ public:
 	{
 		return _start[pos];
 	}
-	Iterator Begin()
+	Iterator Begin()//è¿­ä»£å™¨æ‰€ç”¨
 	{
 		return _start;
 	}
@@ -65,7 +65,7 @@ public:
 	}
 	void Reserve(size_t n)
 	{
-		Expand(n);
+		Expand(n);//å¤ç”¨
 	}
 	void Resize(size_t n, T x = T())
 	{
@@ -78,7 +78,7 @@ public:
 				++_finish;
 			}	
 		}
-		if (n < Size())//capacity²»±ä£¬size¼õĞ¡µ½n
+		if (n < Size())//capacityä¸å˜ï¼Œsizeå‡å°åˆ°n
 		{
 			while (n--)
 			{
@@ -102,7 +102,7 @@ void TestMyVector()
 	for (int i = 0; i < v1.Size(); i++)
 		cout << v1[i] << " ";
 	cout << endl;
-	Vector<int>::Iterator it = v1.Begin();//µü´úÆ÷
+	Vector<int>::Iterator it = v1.Begin();//è¿­ä»£å™¨
 	while (it != v1.End())
 	{
 		cout << *it << " ";
@@ -110,7 +110,7 @@ void TestMyVector()
 	}
 	cout << endl;
 
-	//Ä£Äâreserve  Ô¤ÏÈ¿ª±Ù¿Õ¼ä
+	//æ¨¡æ‹Ÿreserve  é¢„å…ˆå¼€è¾Ÿç©ºé—´
 	Vector<int> v2;
 	cout << "capacity:"<<v2.Capacity() << endl;
 	for (int i = 0; i < 5; i++)
@@ -119,7 +119,7 @@ void TestMyVector()
 	v2.Reserve(10);
 	cout << "capacity:" << v2.Capacity() << endl;
 
-	//Ä£Äâresize
+	//æ¨¡æ‹Ÿresize
 	Vector<int> v3;
 	v3.PushBack(1);
 	v3.PushBack(1);
