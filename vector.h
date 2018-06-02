@@ -1,5 +1,5 @@
 /*
-	STL --> vectorµÄÊ¹ÓÃ
+	STL --> vectorçš„ä½¿ç”¨
 */
 
 #pragma once
@@ -18,14 +18,14 @@ void test_vector()
 	v.push_back(2);
 	v.push_back(3);
 	v.push_back(4);
-	vector<int>::iterator it = v.begin();//µü´úÆ÷
+	vector<int>::iterator it = v.begin();//è¿­ä»£å™¨
 	while (it != v.end())
 	{
 		cout << *it << " ";
 		it++;
 	}
 	cout << endl;*/
-
+ 
 	/*vector<int> v;
 	size_t N = 10000000;
 	int begin, end;
@@ -37,7 +37,7 @@ void test_vector()
 
 	begin = GetTickCount();
 	vector<int> v1;
-	v1.reserve(N);//±ÜÃâÀ©ÈİµÄ½Ó¿Ú£¬»áÔ¤ÏÈÀ©ÈİÖ¸¶¨´óĞ¡µÄ¿Õ¼ä
+	v1.reserve(N);//é¿å…æ‰©å®¹çš„æ¥å£ï¼Œä¼šé¢„å…ˆæ‰©å®¹æŒ‡å®šå¤§å°çš„ç©ºé—´
 	for (int i = 0; i < N; i++)
 		v1.push_back(i);
 	end= GetTickCount();
@@ -51,7 +51,7 @@ void test_vector()
 	v.push_back(4);
 	cout <<"capacity:"<<v.capacity() << endl;
 	cout << "szie:" << v.size() << endl;
-	v.reserve(2);//²»»áËõĞ¡capacityºÍsize
+	v.reserve(2);//ä¸ä¼šç¼©å°capacityå’Œsize
 	cout << "szie:" << v.size() << endl;
 	cout << v.capacity() << endl;*/
 
@@ -89,7 +89,7 @@ void test_vector()
 	cout << "capacity:" << v1.capacity() << endl;
 
 	vector<int> v2;
-	v2.resize(2);//»áËõĞ¡size£¬resizeºÍreserve¶¼²»»áËõĞ¡capacity
+	v2.resize(2);//ä¼šç¼©å°sizeï¼Œresizeå’Œreserveéƒ½ä¸ä¼šç¼©å°capacity
 	cout << "size:" << v2.size() << endl;
 	cout << "capacity:" << v2.capacity() << endl;*/
 
